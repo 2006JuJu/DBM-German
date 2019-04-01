@@ -2,7 +2,7 @@
   "name": "DBM-German-Bot",
   "author": "ZockerNico & Robert Borghese",
   "main": "run.js",
-  "version": "1.3.0-beta.5",
+  "version": "0.9.5",
   "dependencies": {
     "discord.js": "^11.3.0",
     "extend": "^3.0.2",
