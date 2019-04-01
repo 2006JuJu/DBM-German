@@ -1,4 +1,4 @@
-### DE | Willkommen!
+# DE | Willkommen!
 Danke für deine Interesse an diesem Modpack von ZockerNico! Stelle sicher, dass du die aktuelle Version von Discord Bot Maker (Beta) besitzt damit diese Aktionen richtig laufen können. Wenn du zu diesen Aktionen wechseln willst, solltest du vorher die WARNUNG unten gelesen haben...
 
 ## Warnung:
@@ -6,7 +6,7 @@ Bitte denke daran, dass die Namen der Aktionen auf Deutsch übersetzt wurden von
 
 
 
-### EN | Welcome!
+# EN | Welcome!
 Thanks that you are interested into this modpack by ZockerNico! Make sure you have the current version of Discord Bot Maker (Beta) to run those actions. If you want to change to this actions, you should have read the WARNING down below...
 
 ## Warning:
