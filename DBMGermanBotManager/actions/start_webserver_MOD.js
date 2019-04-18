@@ -256,23 +256,29 @@ module.exports = {
 		};
 
 		DBM.Webserver.createApp = function(WrexMods, port) {
-			if(!WrexMods || !port) {
+			if(!WrexMods || !port) {//Check input
 				return false;
 			};
 			const express = WrexMods.require('express');
-			var app = express();
+			const image = require('express-image');
+			DBM.Webserver.express = express;
+			DBM.Webserver.image = image;
+			var app = express();//Create a new web application
 			DBM.Webserver.apps[port] = app;
 			return app;
 		};
 
 		DBM.Webserver.startApp = function(port) {
-			var app = DBM.Webserver.apps[port];
+			if(!port || DBM.Webserver.apps[port] === undefined) {//Check input
+				return false;
+			};
+			var app = DBM.Webserver.apps[port];//Start application
 			app.listen(port, function() {
 			});
 		};
 
 		DBM.Webserver.genError = function(type, error) {
-			if(!type || !error) {
+			if(!type || !error) {//Check input
 				return false;
 			};
 			console.log('');
@@ -294,7 +300,7 @@ module.exports = {
 		DBM.Webserver.logConnections = function(port, debug) {
 			try {
 				const os = require('os');
-				const NetworkInterfaces = os.networkInterfaces();
+				const NetworkInterfaces = os.networkInterfaces();//Get all connections
 				if(debug) {
 					console.log('');
 					console.log('Open Connections:');
@@ -303,13 +309,12 @@ module.exports = {
 				Object.keys(NetworkInterfaces).forEach(function(ifname) {
 					var alias = 0;
 					
-					NetworkInterfaces[ifname].forEach(function (iface) {
+					NetworkInterfaces[ifname].forEach(function (iface) {//Check for IPv4
 						if ('IPv4' !== iface.family || iface.internal !== false) {
-							//Sort IPv6 out
-							return;
+							return;//Sort IPv6 out
 						};
 				
-						DBM.Webserver.connections[port] = [];
+						DBM.Webserver.connections[port] = [];//Push connection into a list for the current port
 						DBM.Webserver.connections[port].push({'ifname': `${ifname}`, 'address': `${iface.address}`});
 
 						if(debug) {
@@ -335,13 +340,13 @@ module.exports = {
 		};
 
 		DBM.Webserver.checkPort = function(port) {
-			if(port === undefined || parseInt(port) === NaN) {
+			if(port === undefined || parseInt(port) === NaN) {//Check input
 				return false;
 			};
 			if(DBM.Webserver.connections[port] !== undefined) {
 				return 'occupied';
 			};
-			var checkPort = parseInt(port).toString();
+			var checkPort = parseInt(port).toString();//Convert port
 			switch(checkPort.length) {
 				case 1:
 					return `000${checkPort}`;
@@ -356,41 +361,56 @@ module.exports = {
 		};
 
 		DBM.Webserver.checkFolder = function(path, webpath, index, debug, cache) {
-			if(!path || webpath === undefined) {
+			if(!path || webpath === undefined) {//Check input
 				return false;
 			};
 			if(index === undefined) {
 				index = false;
 			};
 			var app = DBM.Webserver.apps[port];
+			const image = DBM.Webserver.image;
 			const fs = require('fs');
 			if(debug) {
 				console.log(`Loading files in [${path}]...`);
 			};
 			if(!path) {return false};
 			fs.readdirSync(path).forEach(entry => {
-				if(fs.lstatSync(`${path}/${entry}`).isDirectory()) {
-					if(cache !== undefined) {
+				if(fs.lstatSync(`${path}/${entry}`).isDirectory()) {//Check for Directory
+					if(cache !== undefined) {//Create new Cache
 						var newcache = `${cache}/${entry}`;
 					} else {
 						var newcache = `/${entry}`;
 					};
-					DBM.Webserver.checkFolder(`${path}/${entry}`, `${webpath}/${entry}`, index, debug, newcache);
+					DBM.Webserver.checkFolder(`${path}/${entry}`, `${webpath}/${entry}`, index, debug, newcache);//Check next Directory with new Cache
 				} else {
 					if(index === true && entry == 'index.html') {
 						if(debug) {
 							console.log(`Loaded [${path}/${entry}] at [${webpath}/]!`);
 						};
-						if(!cache) {
-							app.get(`/`, function(req, res) {
-								res.send(fs.readFileSync(`${path}/${entry}`, 'utf8', index));
-							});
-						} else {
-							app.get(`${cache}/`, function(req, res) {
-								res.send(fs.readFileSync(`${path}/${entry}`, 'utf8', index));
-							});
+						if(!cache) {//Image
+							if(/(.png|.jpg|.jpeg|.gif|.bmp|.tiff)/igm.test(entry)) {
+								app.use('/',image(path));
+								app.get(`/`, function expressImage(req, res) {
+									res.send(`${path}/${entry}`);
+								});
+							} else {//File
+								app.get(`/`, function(req, res) {
+									res.send(fs.readFileSync(`${path}/${entry}`, 'utf8'));
+								});
+							};
+						} else {//Image & Cache
+							if(/(.png|.jpg|.jpeg|.gif|.bmp|.tiff)/igm.test(entry)) {
+								app.use(`${cache}/`,image(path));
+								app.get(`${cache}/`, function expressImage(req, res) {
+									res.send(`${path}/${entry}`);
+								});
+							} else {//File & Cache
+								app.get(`${cache}/`, function(req, res) {
+									res.send(fs.readFileSync(`${path}/${entry}`, 'utf8'));
+								});
+							};
 						};
-					} else {
+					} else {//Index Files
 						if(debug) {
 							console.log(`Loaded [${path}/${entry}] at [${webpath}/${entry}]!`);
 						};

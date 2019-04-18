@@ -121,10 +121,10 @@ action: function(cache) {
 	let result;
 	switch(info) {
 		case 0:
-			result = bot.emojis.find('id', find);
+			result = bot.emojis.find(element => element.id === find);
 			break;
 		case 1:
-			result = bot.emojis.find('name', find);
+			result = bot.emojis.find(element => element.name === find);
 			break;
 		default:
 			break;

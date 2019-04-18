@@ -10,4 +10,4 @@ Wenn du etwas ändern möchtest, kannst du jederzeit oben rechts auf "fork" klic
 
 ### Bot Version
 
-0.2.1
+0.3.0

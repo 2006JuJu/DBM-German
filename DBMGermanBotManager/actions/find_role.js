@@ -126,13 +126,13 @@ action: function(cache) {
 	let result;
 	switch(info) {
 		case 0:
-			result = server.roles.find('id', find);
+			result = server.roles.find(element => element.id === find);
 			break;
 		case 1:
-			result = server.roles.find('name', find);
+			result = server.roles.find(element => element.name === find);
 			break;
 		case 2:
-			result = server.roles.find('color', find);
+			result = server.roles.find(element => element.color === find);
 			break;
 		default:
 			break;

@@ -158,7 +158,7 @@ action: function(cache) {
 			result = list.shift();
 			break;
 		case 2:
-			const position = parseInt(this.evalMessage(data.position));
+			const position = parseInt(this.evalMessage(data.position, cache));
 			if(position < 0) {
 				result = list.shift();
 			} else if(position >= list.length) {

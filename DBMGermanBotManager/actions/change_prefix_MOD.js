@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Change Prefix",
+name: "Change Global Prefix",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -34,10 +34,10 @@ subtitle: function(data) {
 	 //---------------------------------------------------------------------
 
 	 // Who made the mod (If not set, defaults to "DBM Mods")
-	 author: "EliteArtz",
+	 author: "EliteArtz & General Wrex",
 
 	 // The version of the mod (Defaults to 1.0.0)
-	 version: "1.8.4",
+	 version: "1.9.1", // original 1.8.4 | re-added in 1.9.1 ~ Danno3817
 
 	 // A short description to show on the mod line for this mod (Must be on a single line)
 	 short_description: "Change Prefix from Bot",
@@ -63,7 +63,7 @@ subtitle: function(data) {
 // are also the names of the fields stored in the action's JSON data.
 //---------------------------------------------------------------------
 
-fields: ["pprefix", "ttoken", "cclient"],
+fields: ["pprefix"],
 
 //---------------------------------------------------------------------
 // Command HTML
@@ -86,16 +86,14 @@ html: function(isEvent, data) {
 <div>
 	<p>
 		<u>Mod Info:</u><br>
-		Made by EliteArtz<br><br>
+		Made by EliteArtz<br>
 	</p>
     <p>
-        <u>You have to fill out everything!</u><br>
+        <u>Thanks to:</u><br>
+        General Wrex for helping with scripting<br>
+    </p>
     Change Prefix to:<br>
-	<textarea id="pprefix" class="round" style="width: 99%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br><br>
-    Token:<br>
-	<textarea id="ttoken" class="round" style="width: 99%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br><br>
-    Client ID:<br>
-	<textarea id="cclient" class="round" style="width: 99%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br><br>
+	<textarea id="pprefix" class="round" style="width: 40%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br><br>
 </div>`;
 },
 
@@ -117,11 +115,22 @@ init: function() {},
 // so be sure to provide checks for variable existance.
 //---------------------------------------------------------------------
 
-action: function(cache) {
+action: function (cache) {
     const data = cache.actions[cache.index];
-	const fs = require('fs');
-    fs.writeFile('./data/settings.json', "{ \"token\": \"" + data.ttoken + "\", \"client\": \"" + data.cclient + "\", \"tag\": \"" + data.pprefix + "\", \"case\": \"true\", \"separator\": \"\\s+\" }");
 
+    try {
+
+        var prefix = this.evalMessage(data.pprefix, cache);
+        if (prefix) {
+            this.getDBM().Files.data.settings.tag = prefix;
+            this.getDBM().Files.saveData("settings", function () { console.log("Prefix changed to " + prefix) });
+        } else {
+            console.log(prefix + " is not valid! Try again!");
+        }
+    } catch (err) {
+        console.log("ERROR!" + err.stack ? err.stack : err);
+    }
+    this.callNextAction(cache);
 },
 
 //---------------------------------------------------------------------
