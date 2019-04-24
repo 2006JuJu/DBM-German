@@ -1,0 +1,7 @@
+**Fehlende Node-Module installieren**
+Wenn du den Fehler "Please install xyz manually" bekommst, nutze diesen Command mittels einer CMD in deinem Bot Ordner:
+`npm i module-name --save`
+Oder siehe dir einfach [diese GIF-Anleitung](https://dbm-mods.xyz/l/27) an.
+
+*Mögliche Fehler:
+"npm is not a registered command" > Nutze Google und installiere npm*

@@ -1,0 +1,3 @@
+**Embed Nachrichten**
+Embed Nachrichten sind eingebettete Nachrichten mit einem Balken an der linken Seite und können nur von Bots gesendet werden.
+Du braucht mehrere Actions, um eine Embed Nachricht zu senden. **Silversunset#9967** hat alles [hier](https://silversunset.net/dbm/tutorials#miscellaneous-tutorials-how-to-create-an-embed-message) erklärt!

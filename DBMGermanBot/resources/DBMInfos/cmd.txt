@@ -1,0 +1,3 @@
+**Den Bot über eine CMD laufen lassen**
+Öffne deinen Projekt Ordner, kicke auf die Adresszeile (oben) und lösche alles darin. Schreibe danach `cmd` und drücke auf Enter. Es sollte sich nun eine CMD öffnen, welche schon im Verzeichnis des Bot Ordners ist. Schreibe nun `node bot.js` und drücke erneut auf Enter.
+**(Du musst [Node.js](https://nodejs.org/de/download/) installiert haben, damit dies funktioniert.)**

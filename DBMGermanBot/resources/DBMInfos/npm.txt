@@ -1,0 +1,2 @@
+**"npm is not recognized as an internal or external command."**
+Wenn du solch einen Fehler bekommen solltest, installiere __NPM__ indem du [hier](https://www.npmjs.com/get-npm) kickst.

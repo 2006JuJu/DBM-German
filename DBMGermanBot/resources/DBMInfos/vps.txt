@@ -1,0 +1,13 @@
+**VPS & Hosting**
+Hier ist eine kurze Liste an Anbietern für [**V**]irtuelle [**P**]rivate [**S**]erver.
+
+Kostenlos: (Sei vorsichtig, für was du dich anmeldest)
+- [Hosting auf Android](https://goo.gl/1if7Ls) (Lese zuerst den Haftungsausschluss)
+- [Glitch](https://goo.gl/RUr4Uq) (Du bekommst hierfür keine Hilfe)
+- [Amazon (AWS)](https://aws.amazon.com/) EC2 oder Lightsail - [EC2 YouTube Tutorial](https://youtu.be/5sfdBQAjLpM) (Kredit Karte benötigt!)
+
+Bezahlt:
+- [Raspberry Pi 3](https://goo.gl/PBgGwS) (Eigenes Hosting)
+- [Nexril](https://nexril.net/)
+- [Digital Ocean](https://m.do.co/)
+- [Vultr](https://www.vultr.com/)

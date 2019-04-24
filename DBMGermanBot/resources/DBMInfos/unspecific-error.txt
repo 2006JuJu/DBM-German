@@ -1,0 +1,19 @@
+**Was bedeutet das?**
+Diese Fehlermeldung taucht auf, wenn dein Computer, Server oder Bot Internetprobleme haben. Das ist normal! Problem: Es beendet den Bot. Um das zu beheben, musst du einmal eine Run Script Action bei einem "On Initialisation" Event laufen lassen.
+
+**Fehlerbehebung!**
+Solltest du das noch nicht getan haben, erstelle ein neues Event mit dem Trigger "On Initialisation".
+Das folgende Script wird versuchen die Verbindung nach einem Fehler wieder herzustellen.
+Füge das hier in deine "Run Script" action dieses Events:
+
+```js
+client.on('error', (error) => {    
+  if(error.message == 'Unexpected server response: 520'){
+    console.log("Keine Verbindung zur Discord API möglich! Versuche es erneut...");
+  }else if(error.message == 'read ECONNRESET'){
+    console.log("Verbindung resettet! Wiederverbinden...");
+  }else{
+    console.error(error);
+  }            
+});
+```

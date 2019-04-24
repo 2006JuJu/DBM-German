@@ -1,0 +1,16 @@
+**Auto Neustart von Bots**
+Es ist eigentlich ziemlich leicht einen Bot mit einer Datei starten zu lassen, die den Bot auch automatisch neustartet. Voraussetzung hierfür ist natürlich ein Server mit Desktop.
+
+**Für Windows Geräte:**
+1. Öffne den Projekt Ordner
+2. Füge die [Batch Datei](https://cdn.discordapp.com/attachments/517725066331422764/517725384897200128/start.bat) in den Ordner ein
+3. Doppelklick auf die Datei
+
+**Für Linux Geräte:**
+1. Öffne den Projekt Ordner
+2. Füge die [SH Datei](https://cdn.discordapp.com/attachments/517725066331422764/552134242889367574/start.sh) in den Ordner ein
+3. Terminal im Projekt Ordner öffnen und `chmod 777 start.sh` ausführen
+4. Terminal schließen
+5. Doppelklick auf die Datei
+
+Du kannst nachdem du fertig bist eine Verknüpfung der Datei z.B. auf deinen Desktop legen, um diese leichter zu erreichen.

@@ -1,0 +1,11 @@
+**DBM Beta beitreten**
+1. Schließe DBM
+2. Öffne Steam
+3. Öffne deine Software Bibliothek
+4. Rechtsklick auf Discord Bot Maker
+5. Wähle Eigenschaften (Unten)
+6. Wähle Betas
+7. Wähle beta - for testing new features im Feld (Kein Key wird benötigt)
+8. DBM sollte anfangen zu updaten. Wenn nicht, starte Steam neu.
+
+**Achte darauf die Verschlüsselung in den Einstellungen zu deaktivieren (falls aktiviert) und dein Projekt zu sichern.**

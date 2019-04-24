@@ -1,0 +1,4 @@
+**Node.js**
+Wenn man einen Bot außerhalb von DBM starten will, benötigt man Node.js um diesen laufen lassen zu können. Beachte, dass man zudem den `actions` Ordner in das Bot Verzeichnis kopieren muss, damit der Bot alle Aktionen ausführen kann.
+
+**[Download](https://nodejs.org/de/download/)**

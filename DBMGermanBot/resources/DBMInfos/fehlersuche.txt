@@ -1,0 +1,15 @@
+**Fehlersuche**
+Discord Bot Maker funktioniert nicht wie vorhergesehen?
+Folge diesen Schritten, um eine Fehlersuche zu starten:
+
+1. Schließe Discord Bot Maker
+2. Öffne Steam
+3. Gehe in die `Software Bibliothek`
+4. Mache einen Rechtsklick auf `Discord Bot Maker`
+5. Wähle `Eigentschaften`
+6. Gehe zu `Lokale Dateien`
+7. Klicke nun `Auf Fehler prüfen`
+
+Nach der Überprüfung sollten fehlerhafte Dateien ersetzt werden.
+Beachte, dass dazu auch Mods gehören! Du musst sie also danach
+neu installieren bei Bedarf.

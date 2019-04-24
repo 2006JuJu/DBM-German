@@ -1,0 +1,15 @@
+**Error: Cannot find module './constants'.**
+Wenn du solch einen Fehler bekommen solltest, öffne deinen Bot Ordner in einer CMD oder einem Terminal, dann erledige die unten angegebenen Dinge.
+
+**Für Windows Geräte:**
+1. Nutze `cd`, um in deinen Bot Ordner zu gelangen, falls du noch nicht dort bist.
+2. Dann tippe den folgenden Befehl GENAU ab: `rd /s /q node_modules`
+3. Installiere danach deine Node-Module mittels `npm i` neu.
+
+**Für Linux Geräte:**
+1. Nutze `cd`, um in deinen Bot Ordner zu gelangen, falls du noch nicht dort bist.
+2. Dann tippe den folgenden Befehl GENAU ab: `rm -rf node_modules`
+3. Installiere danach deine Node-Module mittels `npm i` neu.
+
+
+Wenn du die oben genannten Befehle ausführst, werden alle Node-Module, welche in `package.json` gelistet sind neu installiert. Um ein spezifisches Node-Modul zu installieren, benutze diesen Befehl: `npm i [Modulname] -- save`

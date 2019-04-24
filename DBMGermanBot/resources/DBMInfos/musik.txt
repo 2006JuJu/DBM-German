@@ -1,0 +1,8 @@
+**Musik Kram**
+Musik Funktionen stehen zur Zeit nur für die DBM Beta zur verfügung. 
+Wie man die DBM Beta herunterlädt, siehst du hier: `!Info Beta`
+Nachdem du die Beta hast, brauchst du nur zwei einfache Actions, um
+Musik zu spielen:
+
+1. Join Voice Channel
+2. Play File/URL/Youtube Video

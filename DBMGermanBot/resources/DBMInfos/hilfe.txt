@@ -1,0 +1,4 @@
+**Wie bekomme ich Hilfe zu DBM?**
+Nutze `!Ticket [Dein Problem/Deine Frage]` in <#488734273550024718>, um ein Ticket zu erstellen. Du hast dann einen ganz eigenen Bereich nur für dich!
+Ließ dir aber bitte erst <#547530904453775390> durch, bevor du anfängst Fragen zu stellen.
+Nach einer Weile kannst du dich gerne an die <@&488731191457873951> wenden. Erst wenn **absolut niemand** helfen kann, bitte das <@&488731124248346644> um Hilfe.
