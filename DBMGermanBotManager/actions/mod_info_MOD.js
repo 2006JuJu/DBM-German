@@ -37,7 +37,7 @@ return `Put this into a Bot Initalization event for music!`;
 author: "DBM Mods",
 
 // The version of the mod (Defaults to 1.0.0)
-version: "1.9.5 ~ beta",
+version: "1.9.5",
 
 // A short description to show on the mod line for this mod.
 short_description: "Information about the Mod Collection & Overwrites Bot.js",
@@ -376,14 +376,18 @@ console.log('Music function successfully overwritten.');
 //---------------------------------------------------------------------
 
 mod: function(DBM) {
-//Check for PlayingNow Data Object
+	//Check for PlayingNow Data Object
 	if(DBM.Audio.playingnow === undefined) {
 		DBM.Audio.playingnow = [];
 	};
 
-	//Create Data Objects
-	DBM.Audio.loopQueue = {};
-	DBM.Audio.loopItem = {};
+	//Check for Loop Data Objects
+	if(DBM.Audio.loopQueue === undefined) {
+		DBM.Audio.loopQueue = {};
+	};
+	if(DBM.Audio.loopItem === undefined) {
+		DBM.Audio.loopItem = {};
+	};
 
 	DBM.Audio.addToQueue = function(item, cache) {
 		if(!cache.server) return;
