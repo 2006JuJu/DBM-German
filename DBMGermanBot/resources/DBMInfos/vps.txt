@@ -1,13 +1,17 @@
-**VPS & Hosting**
-Hier ist eine kurze Liste an Anbietern für [**V**]irtuelle [**P**]rivate [**S**]erver.
+__**VPS & Hosting**__
+
+Hier ist eine kurze Liste an [**V**]irtuellen [**P**]rivaten [**S**]erver Anbietern.
+Mit einem VPS, kannst du deine Bots 24/7 am Laufen halten, ohne das dein eigener PC / dein eigenes Handy dafür herhalten muss.
+Wir werden dir jedoch unter Umständen nicht dabei helfen, da das den Bereich des DBM Supports überschreitet.
 
 Kostenlos: (Sei vorsichtig, für was du dich anmeldest)
-- [Hosting auf Android](https://goo.gl/1if7Ls) (Lese zuerst den Haftungsausschluss!)
-- [Glitch](https://goo.gl/RUr4Uq) - [Tutorial](https://www.youtube.com/watch?v=ryzkos6Z8bQ) (Du bekommst hierfür keine Hilfe von uns!)
-- [Amazon (AWS)](https://aws.amazon.com/) EC2 oder Lightsail - [EC2 YouTube Tutorial](https://youtu.be/5sfdBQAjLpM) (Kredit Karte benötigt!)
+• [Hosting on Android](https://goo.gl/1if7Ls) (Lese zuerst den Haftungsausschluss!)
+• [Glitch](https://dbotmaker.io/forums/threads/android-free-hosting.247/) - [Video Tutorial](https://youtu.be/ryzkos6Z8bQ)
+• Amazon (AWS) [EC2](https://aws.amazon.com/en/ec2/) or [Lightsail](https://aws.amazon.com/en/lightsail/) - [EC2 Video Tutorial](https://youtu.be/5sfdBQAjLpM)  (Kredit Karte benötigt!)
 
-Bezahlt:
-- [Raspberry Pi 3](https://goo.gl/PBgGwS) (Eigenes Hosting)
-- [Nexril](https://nexril.net/)
-- [Digital Ocean](https://m.do.co/)
-- [Vultr](https://www.vultr.com/)
+Kostenpflichtig:
+• [Raspberry Pi 3](https://www.raspberrypi.org/) - [Tutorial](https://silversunset.net/dbm/tutorials#running-your-bot-247-vps-hosting-raspberry-pi-self-hosted)
+• [Nexril](https://nexril.net/)
+• [Digital Ocean](https://www.digitalocean.com/) - [Tutorial](https://silversunset.net/dbm/tutorials#running-your-bot-247-vps-hosting-digital-ocean)
+• [Vultr](https://www.vultr.com/)
+• [XeonServ](https://www.xeonserv.de/)
