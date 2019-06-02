@@ -7,7 +7,7 @@ Wir werden dir jedoch unter Umständen nicht dabei helfen, da das den Bereich de
 Kostenlos: (Sei vorsichtig, für was du dich anmeldest)
 • [Hosting on Android](https://goo.gl/1if7Ls) (Lese zuerst den Haftungsausschluss!)
 • [Glitch](https://dbotmaker.io/forums/threads/android-free-hosting.247/) - [Video Tutorial](https://youtu.be/ryzkos6Z8bQ)
-• Amazon (AWS) [EC2](https://aws.amazon.com/en/ec2/) or [Lightsail](https://aws.amazon.com/en/lightsail/) - [EC2 Video Tutorial](https://youtu.be/5sfdBQAjLpM)  (Kredit Karte benötigt!)
+• Amazon (AWS) [EC2](https://aws.amazon.com/en/ec2/) oder [Lightsail](https://aws.amazon.com/en/lightsail/) - [EC2 Video Tutorial](https://youtu.be/5sfdBQAjLpM) (Kredit Karte benötigt!)
 
 Kostenpflichtig:
 • [Raspberry Pi 3](https://www.raspberrypi.org/) - [Tutorial](https://silversunset.net/dbm/tutorials#running-your-bot-247-vps-hosting-raspberry-pi-self-hosted)
