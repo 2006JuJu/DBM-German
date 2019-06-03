@@ -14,4 +14,5 @@ Kostenpflichtig:
 • [Nexril](https://nexril.net/)
 • [Digital Ocean](https://www.digitalocean.com/) - [Tutorial](https://silversunset.net/dbm/tutorials#running-your-bot-247-vps-hosting-digital-ocean)
 • [Vultr](https://www.vultr.com/)
-• [XeonServ](https://www.xeonserv.de/)
+• [XeonServ](https://bit.ly/xeonserv)
+• [Signaltransmitter](https://signaltransmitter.de/)
