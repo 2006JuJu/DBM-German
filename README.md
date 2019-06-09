@@ -1,11 +1,11 @@
 # DE | Willkommen bei DBM German!
-Hier findest du die zwei Unterkategorien, genannt [Translations] und [DBMGermanBot].
+Hier findest du die drei Unterkategorien, genannt [Translations], [DBMGermanBot] und [DBMGermanBotManager].
 
 ## Translations:
 Bist du interessiert an deutschen DBM Actions oder einer deutschen bot.js Datei? Dann bist du dort richtig!
 
-## DBM German Bot:
-Wolltest du schon immer mal wissen, wie unser DBM German Bot funktioniert oder willst ihn verbessern? Dort findest du den ganzen Bot!
+## DBMGermanBot & DBMGermanBotManager:
+Wolltest du schon immer mal wissen, wie unsere DBM German Bots funktioniert oder sie verbessern? Dort findest du den ganzen Bots!
 
 
 
@@ -15,5 +15,5 @@ Here you can find two subcategories, called [Translations] and [DBMGermanBot].
 ## Translations:
 Are you interested in german DBM actions or a german bot.js file? Then you should take look over there!
 
-## DBM German Bot:
-Ever wanted to know how our DBM German Bot works or do you want to improve it? There you can find the entire bot!
+## DBMGermanBot & DBMGermanBotManager:
+Ever wanted to know how our DBM German Bots work or want to improve it? There you can find the entire bots!
